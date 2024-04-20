@@ -3,7 +3,7 @@ import subprocess
 import modal
 
 fooocus_port = 7860
-server_timeout = 600
+server_timeout = 1200
 modal_gpu = "t4"
 DIR = "/root/fooocus"
 
@@ -30,7 +30,7 @@ volume = modal.Volume.from_name(
         concurrency_limit=1,
         volumes={DIR: volume},
         _allow_background_volume_commits=True,
-        allow_concurrent_inputs=10,
+        allow_concurrent_inputs=25,
 )
 
 @modal.web_server(port=fooocus_port, startup_timeout=server_timeout)
