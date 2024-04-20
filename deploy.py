@@ -8,6 +8,7 @@ modal_gpu = "t4"
 DIR = "/root/fooocus"
 
 app = modal.App(
+    "Fooocus",
     image=modal.Image.debian_slim(python_version="3.11")
     .apt_install(
         "wget",
@@ -21,7 +22,7 @@ volume = modal.Volume.from_name(
     "fooocus", create_if_missing=True
 )
 
-@modal.function(
+@app.function(
         cpu=2,
         gpu=modal_gpu,
         memory=128,
