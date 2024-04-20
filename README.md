@@ -10,7 +10,7 @@ Follow this guide, and you can deploy the [Fooocus](https://github.com/lllyasvie
 
 1. Start by registering on [Modal](https://modal.com). 💰 (Bonus - You'll get $30 free every month.)
 
-![Register on Modal](https://github.com/BarrenWardo/Fooocus-Modal/assets/86141456/335bfba0-3a53-4ab8-9245-5b0d4998c109)
+![Register on Modal](https://github.com/BarrenWardo/Fooocus-Modal/assets/86141456/fa2ad8d8-506d-4d92-936a-1eeac9ea9ed5)
 
 2. Once registered, click on your profile & then settings (top right corner).
 
