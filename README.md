@@ -84,6 +84,21 @@ Now Enjoy!
   - Go into Fooocus-Modal folder using terminal & run any command below:
     - `modal serve deploy.py` (runs until the terminal is closed)
     - `modal serve deploy.py --timeout 3600` (runs for 3600 seconds = 1 hour; you can change this number. Also, the terminal needs to be open or the app gets stopped)
+   
+- The deployment is currently set to run on a Tesla T4 GPU and 1 container which will cost approximately $1 per hour. You can change it in the deploy.py file at line 7. The GPU list is available [here](https://modal.com/docs/reference/modal.gpu).
+   - “t4”
+   - “l4”
+   - “a100”
+   - “h100”
+   - “a10g”
+   - “any”
+
+![GPU](https://github.com/BarrenWardo/Fooocus-Modal/assets/86141456/365e72d0-5011-4c3a-a1ed-3ee65bd37d78)
+
+- Modal Pricing :
+
+![Modal Pricing](https://github.com/BarrenWardo/Fooocus-Modal/assets/86141456/ca311751-ab76-4fcb-8a70-dee269eb986f)
+
 
 ### 📓 Dev Notes
 
