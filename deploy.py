@@ -2,7 +2,7 @@ import os
 import subprocess
 import modal
 
-fooocus_port = 7860
+fooocus_port = 7865
 server_timeout = 1200
 modal_gpu = "t4"
 DIR = "/root/fooocus"
