@@ -26,11 +26,11 @@ volume = modal.Volume.from_name(
         cpu=2,
         gpu=modal_gpu,
         memory=128,
-        keep_warm=1,
+        #keep_warm=1,
         concurrency_limit=1,
         volumes={DIR: volume},
         _allow_background_volume_commits=True,
-        allow_concurrent_inputs=25,
+        allow_concurrent_inputs=100,
         timeout=server_timeout,
 )
 
