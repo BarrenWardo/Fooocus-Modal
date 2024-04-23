@@ -31,6 +31,7 @@ volume = modal.Volume.from_name(
         volumes={DIR: volume},
         _allow_background_volume_commits=True,
         allow_concurrent_inputs=25,
+        timeout=server_timeout,
 )
 
 @modal.web_server(port=fooocus_port, startup_timeout=server_timeout)
