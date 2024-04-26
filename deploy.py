@@ -15,7 +15,10 @@ app = modal.App(
         "git",
         "libgl1",
         "libglib2.0-0",
-    )  
+    )
+    .pip_install_from_requirements(
+        "requirements.txt",
+    )
 )
 
 volume = modal.Volume.from_name(
@@ -40,10 +43,10 @@ def run_fooocus():
     fooocus_folder = os.path.join(DIR, "Fooocus")
     if os.path.exists(fooocus_folder):
         fooocus_process = f"""
-            cd {fooocus_folder} && git pull && pip install -r requirements_versions.txt && python entry_with_update.py --listen --port {fooocus_port}
+            cd {fooocus_folder} && git pull && python entry_with_update.py --listen --port {fooocus_port}
         """
     else:
         fooocus_process = f"""
-            cd {DIR} && git clone https://github.com/lllyasviel/Fooocus.git && cd Fooocus && pip install -r requirements_versions.txt && python entry_with_update.py --listen --port {fooocus_port}
+            cd {DIR} && git clone https://github.com/lllyasviel/Fooocus.git && cd Fooocus && python entry_with_update.py --listen --port {fooocus_port}
         """
     subprocess.Popen(fooocus_process, shell=True)
