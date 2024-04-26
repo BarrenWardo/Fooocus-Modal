@@ -26,15 +26,15 @@ volume = modal.Volume.from_name(
 )
 
 @app.function(
-        cpu=2,
-        gpu=modal_gpu,
-        memory=128,
-        #keep_warm=1,
-        concurrency_limit=1,
-        volumes={DIR: volume},
-        _allow_background_volume_commits=True,
-        allow_concurrent_inputs=100,
-        timeout=server_timeout,
+    cpu=2,
+    gpu=modal_gpu,
+    memory=128,
+    #keep_warm=1,
+    concurrency_limit=1,
+    volumes={DIR: volume},
+    _allow_background_volume_commits=True,
+    allow_concurrent_inputs=100,
+    timeout=server_timeout,
 )
 
 @modal.web_server(port=fooocus_port, startup_timeout=server_timeout)
