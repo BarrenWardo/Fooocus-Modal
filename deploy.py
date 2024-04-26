@@ -18,6 +18,7 @@ app = modal.App(
     )
     .pip_install_from_requirements(
         "requirements.txt",
+        gpu=modal_gpu,
     )
 )
 
