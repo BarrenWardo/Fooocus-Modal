@@ -7,6 +7,10 @@ server_timeout = 1200
 modal_gpu = "t4"
 DIR = "/root/fooocus"
 
+volume = modal.Volume.from_name(
+    "fooocus", create_if_missing=True
+)
+
 app = modal.App(
     "Fooocus",
     image=modal.Image.debian_slim(python_version="3.11")
@@ -19,10 +23,6 @@ app = modal.App(
     .pip_install_from_requirements(
         "requirements.txt",
     )
-)
-
-volume = modal.Volume.from_name(
-    "fooocus", create_if_missing=True
 )
 
 @app.function(
