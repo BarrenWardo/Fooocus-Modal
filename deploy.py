@@ -52,7 +52,7 @@ volume = modal.Volume.from_name(
         _allow_background_volume_commits=True,
         allow_concurrent_inputs=100,
         timeout=server_timeout,
-        container_idle_timeout=120,
+        container_idle_timeout=300,
 )
 
 @modal.web_server(port=fooocus_port, startup_timeout=server_timeout)
